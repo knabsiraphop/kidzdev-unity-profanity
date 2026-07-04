@@ -18,7 +18,8 @@ namespace KidzDev.Unity.Profanity {
         public void SetWordList(ProfanityLanguage language, string[] words) {
             if (words == null || words.Length == 0) { RemoveWordList(language); return; }
             var pattern = BuildPattern(language, words);
-            var opts    = RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled;
+            if (string.IsNullOrEmpty(pattern)) { RemoveWordList(language); return; }
+            var opts = RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled;
             _regexes[language] = new Regex(pattern, opts);
         }
 
@@ -55,13 +56,15 @@ namespace KidzDev.Unity.Profanity {
 
         static string BuildPattern(ProfanityLanguage language, string[] words) {
             var useBoundary = !NoBoundaryLanguages.Contains(language);
-            var sb = new StringBuilder();
+            var sb  = new StringBuilder();
+            var any = false;
             for (var i = 0; i < words.Length; i++) {
                 if (string.IsNullOrWhiteSpace(words[i])) continue;
-                if (i > 0) sb.Append('|');
+                if (any) sb.Append('|');
                 if (useBoundary) sb.Append(@"\b");
                 sb.Append(Regex.Escape(words[i].Trim()));
                 if (useBoundary) sb.Append(@"\b");
+                any = true;
             }
             return sb.ToString();
         }

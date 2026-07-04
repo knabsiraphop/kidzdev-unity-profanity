@@ -26,7 +26,8 @@ namespace KidzDev.Unity.Profanity {
         public void SetWordList(ProfanityLanguage language, string[] words) {
             if (words == null || words.Length == 0) { RemoveWordList(language); return; }
             var pattern = BuildPattern(language, words, _normalizer);
-            var opts    = RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled;
+            if (string.IsNullOrEmpty(pattern)) { RemoveWordList(language); return; }
+            var opts = RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled;
             _regexes[language] = new Regex(pattern, opts);
         }
 

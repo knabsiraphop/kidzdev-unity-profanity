@@ -1,6 +1,6 @@
 {
   "name": "com.kidzdev.unity.profanity",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "KidzDev Unity Profanity",
   "description": "Production-grade multilingual profanity filter. Obfuscation-aware engine (leetspeak, separators, repeat-collapse), allowlist for false-positive prevention, plug-in data loader (Resources default, optional Addressables adapter). Supports English and Thai out of the box.",
   "unity": "6000.0",

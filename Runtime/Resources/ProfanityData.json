@@ -4,26 +4,30 @@
     {
       "language": "English",
       "words": [
-        "shit", "shite", "shithead", "bullshit", "horseshit", "shithole",
-        "fuck", "fucker", "fucking", "fuckface", "motherfucker", "clusterfuck",
-        "ass", "asshole", "jackass", "smartass", "badass", "dumbass", "lardass",
-        "bitch", "son of a bitch",
+        "shit", "shite", "shitty", "shithead", "shitface", "shitfaced", "shitshow", "shitstorm",
+        "shithole", "bullshit", "horseshit", "batshit", "dipshit", "shitless", "apeshit",
+        "fuck", "fucking", "fucker", "fucked", "fuckface", "fuckwit", "fuckhead", "fuckup",
+        "fuckery", "fuckboy", "motherfucker", "clusterfuck", "fuckin", "fucktard",
+        "ass", "asshole", "asswipe", "assface", "assclown", "assbag", "assbutt",
+        "dumbass", "jackass", "badass", "smartass", "lardass", "fatass", "kissass", "hardass",
+        "dick", "dickhead", "dickface", "dickwad", "dickweed", "dickbag",
+        "cock", "cockhead", "cocksucker", "cockface",
         "cunt", "cuntface",
-        "dick", "dickhead", "dickface",
-        "cock", "cockhead",
-        "prick",
-        "bastard",
-        "whore",
-        "slut",
-        "twat",
-        "wanker",
-        "tosser",
-        "bollocks",
-        "piss", "pisser",
-        "crap", "crappy",
-        "damn", "goddamn",
-        "hell",
-        "arse", "arsehole"
+        "pussy", "pussyhole",
+        "tits", "titty", "titties", "boobies",
+        "bitch", "biatch", "sonofabitch", "bitchass", "bitchy",
+        "bastard", "bastards",
+        "bollocks", "wanker", "tosser", "twat", "prick", "pricks",
+        "douche", "douchebag", "douchecanoe",
+        "jerkoff", "jackoff", "wank", "wanking",
+        "scumbag", "scum",
+        "slut", "slutty", "whore", "whorish", "hoe", "skank", "tramp",
+        "damn", "goddamn", "goddamnit", "dammit",
+        "hell", "hellspawn",
+        "piss", "pissed", "pisser", "pissoff",
+        "crap", "crappy", "crapola",
+        "bloody", "bugger", "sod", "sodding",
+        "arse", "arsehole", "arsewipe"
       ]
     },
     {
@@ -33,7 +37,10 @@
         "มึง", "กู", "อีหน้าหี", "ไอ้หน้าหี", "แม่งเย็ด",
         "เย็ด", "หี", "ควย", "อีดอก", "ไอ้ชาติหมา",
         "สัส", "หน้าหี", "อีบ้า", "ไอ้บ้า",
-        "แดก", "ตอแหล", "อีโง่", "ไอ้โง่"
+        "แดก", "ตอแหล", "อีโง่", "ไอ้โง่",
+        "ระยำ", "เชี่ย", "แม่ง", "กะหรี่", "ดอกทอง",
+        "อีเหี้ย", "ไอ้เหี้ย", "อีสัส", "ไอ้สัส",
+        "จัญไร", "ฉิบหาย", "บัดซบ"
       ]
     }
   ],
@@ -42,7 +49,11 @@
     "classic", "damned", "hellenic", "dispatch", "bassist", "assay",
     "glasshouse", "masthead", "assistant", "assessment", "assumption",
     "assignment", "harass", "crassly", "brass", "grassland",
-    "peacock", "cocktail", "hancock", "dickens", "dickens",
-    "prickly", "bastardize", "wholesale", "twitch", "witchcraft"
+    "peacock", "cocktail", "hancock", "dickens",
+    "prickly", "bastardize", "wholesale",
+    "cockpit", "cockerel", "shuttlecock",
+    "titmouse", "attitude", "constitution", "institute", "prostitute",
+    "molasses", "arsenal", "arsenic", "compass", "surpass",
+    "embarrass", "carcass", "trespass"
   ]
 }

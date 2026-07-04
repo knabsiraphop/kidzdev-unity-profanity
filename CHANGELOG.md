@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-07-04
+
+### Fixed
+- **Critical**: `RegexProfanityFilter.BuildPattern` (Basic match mode) built a broken regex pattern when the word list contained a leading or only blank/whitespace entry (e.g. `["", "shit"]`), producing patterns like `"|\bshit\b"` — the leading empty alternative matches an empty span at *every* position in *any* string, so `Contains()` returned `true` for all input and `Censor()` corrupted unrelated text. Fixed by tracking whether any real word was emitted (mirroring the fix already present in `NormalizedProfanityFilter`) instead of using the loop index to decide alternation separators.
+- `NormalizedProfanityFilter.SetWordList` / `RegexProfanityFilter.SetWordList`: guarded against the case where every word in the list is blank — an empty resulting regex pattern now falls back to `RemoveWordList` instead of compiling an always-matching empty-string regex.
+
+### Added
+- `Tests/Editor/RegexFilterTests.cs` — new dedicated EditMode test suite for `RegexProfanityFilter` (Basic mode had zero prior test coverage).
+- Regression tests for the blank-word-list bug in both `RegexFilterTests` and `NormalizedFilterTests`.
+- Significantly expanded the built-in/demo word list: ~100 English entries (scatological, sexual, and insult categories with common variants) and 35+ Thai entries, plus a matching expanded allowlist of common false-positive words (`cockpit`, `attitude`, `constitution`, `arsenal`, `molasses`, etc.).
+- README.md rewritten with a full features section covering every capability: obfuscation-aware matching, dual filter engines, Scunthorpe guard, multilingual support, facade/seam architecture, named/mergeable data sources, pluggable loaders, zero-setup default data, and the UniTask-only dependency footprint.
+
 ## [1.0.1] - 2026-07-04
 
 ### Added
