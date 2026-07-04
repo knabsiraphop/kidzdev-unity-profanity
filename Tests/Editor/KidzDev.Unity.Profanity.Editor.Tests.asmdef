@@ -1,0 +1,13 @@
+{
+  "name": "KidzDev.Unity.Profanity.Editor.Tests",
+  "rootNamespace": "KidzDev.Unity.Profanity.Tests",
+  "references": [
+    "KidzDev.Unity.Profanity",
+    "UniTask",
+    "UnityEngine.TestRunner",
+    "UnityEditor.TestRunner"
+  ],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": false,
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"]
+}

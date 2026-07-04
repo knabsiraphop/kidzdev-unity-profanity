@@ -1,0 +1,10 @@
+{
+  "name": "KidzDev.Unity.Profanity.AddressablesLoader",
+  "rootNamespace": "KidzDev.Unity.Profanity.Samples",
+  "references": [
+    "KidzDev.Unity.Profanity",
+    "Unity.Addressables",
+    "UniTask"
+  ],
+  "autoReferenced": false
+}

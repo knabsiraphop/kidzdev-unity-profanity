@@ -1,0 +1,8 @@
+{
+  "name": "KidzDev.Unity.Profanity",
+  "rootNamespace": "KidzDev.Unity.Profanity",
+  "references": [
+    "UniTask"
+  ],
+  "autoReferenced": true
+}

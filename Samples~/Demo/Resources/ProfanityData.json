@@ -1,0 +1,14 @@
+{
+  "replacementCharacter": "*",
+  "languages": [
+    {
+      "language": "English",
+      "words": ["shit", "fuck", "ass", "bitch", "crap", "damn", "hell", "piss", "cunt", "dick"]
+    },
+    {
+      "language": "Thai",
+      "words": ["หยาบ", "ควาย", "สัตว์", "เหี้ย", "ไอ้", "อีสัตว์"]
+    }
+  ],
+  "allowWords": ["scunthorpe", "assassin", "class", "bass", "assemble", "passage", "classic", "damned", "hellenic", "dispatch"]
+}

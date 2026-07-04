@@ -1,0 +1,25 @@
+{
+  "name": "com.kidzdev.unity.profanity",
+  "version": "1.0.0",
+  "displayName": "KidzDev Unity Profanity",
+  "description": "Production-grade multilingual profanity filter. Obfuscation-aware engine (leetspeak, separators, repeat-collapse), allowlist for false-positive prevention, plug-in data loader (Resources default, optional Addressables adapter). Supports English and Thai out of the box.",
+  "unity": "6000.0",
+  "author": {
+    "name": "KidzDev"
+  },
+  "dependencies": {
+    "com.cysharp.unitask": "2.5.11"
+  },
+  "samples": [
+    {
+      "displayName": "Demo",
+      "description": "Ready-to-run scene: EN+TH word lists loaded from Resources, live censor input field, allowlist demonstration.",
+      "path": "Samples~/Demo"
+    },
+    {
+      "displayName": "Addressables Loader",
+      "description": "IProfanityDataLoader backed by Unity Addressables — load word-list JSON from remote with label 'profanity'.",
+      "path": "Samples~/AddressablesLoader"
+    }
+  ]
+}

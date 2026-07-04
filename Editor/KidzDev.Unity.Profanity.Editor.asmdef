@@ -1,0 +1,9 @@
+{
+  "name": "KidzDev.Unity.Profanity.Editor",
+  "rootNamespace": "KidzDev.Unity.Profanity.Editor",
+  "references": [
+    "KidzDev.Unity.Profanity"
+  ],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": false
+}
