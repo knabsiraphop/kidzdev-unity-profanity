@@ -4,6 +4,7 @@
   "references": [
     "KidzDev.Unity.Profanity",
     "Unity.Addressables",
+    "Unity.ResourceManager",
     "UniTask"
   ],
   "autoReferenced": false

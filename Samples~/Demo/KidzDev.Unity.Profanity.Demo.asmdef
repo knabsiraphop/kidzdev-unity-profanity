@@ -3,7 +3,8 @@
   "rootNamespace": "KidzDev.Unity.Profanity.Samples",
   "references": [
     "KidzDev.Unity.Profanity",
-    "UniTask"
+    "UniTask",
+    "Unity.TextMeshPro"
   ],
   "autoReferenced": false
 }

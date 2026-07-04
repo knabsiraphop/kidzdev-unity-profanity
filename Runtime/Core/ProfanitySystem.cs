@@ -20,9 +20,18 @@ namespace KidzDev.Unity.Profanity {
 
         /// <summary>
         /// Loads <c>Resources/ProfanitySettings</c>, creates the right filter, and applies it.
-        /// Safe to call when the asset does not exist (uses built-in defaults).
+        /// When no settings asset exists, falls back to the built-in <c>Resources/ProfanityData</c>
+        /// so the package works out of the box without any project setup.
         /// </summary>
-        public static void Configure() => Configure(Resources.Load<ProfanitySettings>("ProfanitySettings"));
+        public static void Configure() {
+            var settings = Resources.Load<ProfanitySettings>("ProfanitySettings");
+            if (settings == null) {
+                Default = new ProfanityManager();
+                Default.AddSource("default", new ResourcesJsonProfanityLoader(), "ProfanityData");
+                return;
+            }
+            Configure(settings);
+        }
 
         /// <summary>
         /// Applies an explicit <paramref name="settings"/> asset, creating the matching filter.

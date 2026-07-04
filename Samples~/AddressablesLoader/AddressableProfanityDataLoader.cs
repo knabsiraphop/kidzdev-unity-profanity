@@ -29,18 +29,24 @@ namespace KidzDev.Unity.Profanity.Samples {
             }
 
             _handle = Addressables.LoadAssetAsync<TextAsset>(key);
-            TextAsset asset;
+
+            // Poll until done — avoids dependency on UniTask.Addressables extension package.
             try {
-                asset = await _handle.ToUniTask(cancellationToken: ct);
-                _loaded = true;
+                await UniTask.WaitUntil(() => _handle.IsDone, cancellationToken: ct);
             } catch (OperationCanceledException) {
                 Addressables.Release(_handle);
                 throw;
-            } catch (Exception ex) {
+            }
+
+            if (_handle.Status != AsyncOperationStatus.Succeeded) {
+                var ex = _handle.OperationException;
                 Addressables.Release(_handle);
-                Debug.LogError($"[Profanity] Failed to load Addressable '{key}': {ex.Message}");
+                Debug.LogError($"[Profanity] Failed to load Addressable '{key}': {ex?.Message}");
                 return new ProfanityData();
             }
+
+            var asset = _handle.Result;
+            _loaded = true;
 
             if (asset == null) {
                 Debug.LogWarning($"[Profanity] Addressable TextAsset '{key}' is null.");
@@ -57,8 +63,6 @@ namespace KidzDev.Unity.Profanity.Samples {
         }
 
         static ProfanityData ParseJson(string json) {
-            // Re-uses the same JsonUtility shape as ResourcesJsonProfanityLoader.
-            // We call into a small shared helper via reflection is avoided; duplicate the tiny struct.
             var root = JsonUtility.FromJson<JsonRoot>(json) ?? new JsonRoot();
             var data = new ProfanityData();
             if (root.replacementCharacter?.Length == 1)

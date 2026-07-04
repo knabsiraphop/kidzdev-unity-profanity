@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-07-04
+
+### Added
+- `Runtime/Resources/ProfanityData.json` — built-in default word list (EN + TH); `ProfanitySystem.Configure()` now auto-loads it when no `ProfanitySettings` asset is found.
+- Demo sample: `ProfanityDemo.unity` scene (1920×1080 CanvasScaler reference resolution, dark theme).
+- Demo controller: Obfuscation-Aware Mode toggle switches between `NormalizedProfanityFilter` and `RegexProfanityFilter` at runtime.
+- Expanded EN and TH word lists in `Samples~/Demo/Resources/ProfanityData.json`.
+
+### Fixed
+- `KidzDev.Unity.Profanity.Demo.asmdef` missing `Unity.TextMeshPro` reference — `TMP_InputField`/`TMP_Text` compile errors resolved.
+- `KidzDev.Unity.Profanity.AddressablesLoader.asmdef` missing `Unity.ResourceManager` reference — `AsyncOperationHandle<T>` compile error resolved.
+- `AddressableProfanityDataLoader`: replaced `ToUniTask()` (requires `UniTask.Addressables`) with `WaitUntil(() => handle.IsDone)` — works with base `UniTask` package only.
+
 ## [1.0.0] - 2026-07-04
 
 ### Added

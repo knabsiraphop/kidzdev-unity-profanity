@@ -7,13 +7,13 @@ Production-grade multilingual profanity filter for Unity. Obfuscation-aware engi
 Open **Package Manager → + → Add package from git URL** and enter:
 
 ```
-https://github.com/knabsiraphop/kidzdev-unity-profanity.git#v1.0.0
+https://github.com/knabsiraphop/kidzdev-unity-profanity.git#v1.0.1
 ```
 
 Or add to `Packages/manifest.json`:
 
 ```json
-"com.kidzdev.unity.profanity": "https://github.com/knabsiraphop/kidzdev-unity-profanity.git#v1.0.0"
+"com.kidzdev.unity.profanity": "https://github.com/knabsiraphop/kidzdev-unity-profanity.git#v1.0.1"
 ```
 
 > **UniTask** (`com.cysharp.unitask`) is a required dependency — add the OpenUPM scoped registry if it is not already present.
